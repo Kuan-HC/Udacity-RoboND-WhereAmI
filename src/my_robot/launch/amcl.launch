@@ -1,3 +1,5 @@
 <launch>
-<!-- TODO: Add nodes here -->
+  <!-- Map Server -->
+  <arg name="map_file" default="$(find <YOUR PACKAGE NAME>)/maps/<YOUR MAP NAME>.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 </launch>
