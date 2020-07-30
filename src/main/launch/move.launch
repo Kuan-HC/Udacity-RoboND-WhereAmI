@@ -7,7 +7,7 @@
   <arg name="z" default="0"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
-  <arg name="yaw" default="0"/>
+  <arg name="yaw" default="1.7"/>
 
   <!-- Launch other relevant files-->
   <include file="$(find my_robot)/launch/robot_description.launch"/>
@@ -37,16 +37,16 @@
   <node name="amcl" pkg="amcl" type="amcl" output="screen">
 
     <!-- Overall Filter -->
-    <param name="min_particles" value="50"  />     <!--default: 100   -->
-    <param name="max_particles" value="200" />     <!--default: 5000  -->
-    <param name="update_min_a"  value="0.1" />     <!--default: 0.5   -->
-    <param name="update_min_d"  value="0.25"/>     <!--default: 0.2   -->
+    <param name="min_particles" value="200"  />     <!--default: 100   -->
+    <param name="max_particles" value="2500" />     <!--default: 5000  -->
+    <param name="update_min_a"  value="0.5" />     <!--default: 0.5   -->
+    <param name="update_min_d"  value="0.2"/>     <!--default: 0.2   -->
     <!-- If you choose to define initial pose here -->
     <param name="initial_pose_x" value="0"/>
     <param name="initial_pose_y" value="0"/>
 
     <!-- Laser -->
-    <param name="laser_max_beams" value="20"  />   <!--default: 30   -->
+    <param name="laser_max_beams" value="40"  />   <!--default: 30   -->
     <param name="laser_z_rand"    value="0.05"/>   <!--default: 0.05 -->
     <param name="laser_z_hit"     value="0.95"/>   <!--default: 0.95 -->
 
@@ -63,11 +63,9 @@
 
     
   </node>
+  
 
   <!--launch rviz-->
   <node name="rviz" pkg="rviz" type="rviz" output="screen"/>
-
-  <!--launch teleop-->
-  <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard"
-   type="teleop_twist_keyboard.py" output="screen" />
+  
 </launch>
