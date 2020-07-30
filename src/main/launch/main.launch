@@ -35,15 +35,33 @@
 
   <!-- AMCL Node -->
   <node name="amcl" pkg="amcl" type="amcl" output="screen">
-    
+
+    <!-- Overall Filter -->
+    <param name="min_particles" value="50"  />     <!--default: 100   -->
+    <param name="max_particles" value="200" />     <!--default: 5000  -->
+    <param name="update_min_a"  value="0.1" />     <!--default: 0.5   -->
+    <param name="update_min_d"  value="0.25"/>     <!--default: 0.2   -->
+    <!-- If you choose to define initial pose here -->
+    <param name="initial_pose_x" value="0"/>
+    <param name="initial_pose_y" value="0"/>
+
+    <!-- Laser -->
+    <param name="laser_max_beams" value="20"  />   <!--default: 30   -->
+    <param name="laser_z_rand"    value="0.05"/>   <!--default: 0.05 -->
+    <param name="laser_z_hit"     value="0.95"/>   <!--default: 0.95 -->
+
+    <!-- Odometry -->
     <param name="odom_frame_id" value="odom"/>
     <param name="odom_model_type" value="diff-corrected"/>
     <param name="base_frame_id" value="robot_footprint"/>
     <param name="global_frame_id" value="map"/>
+    <!-- All odom_apha default values are 0.2 -->
+    <param name="odom_alpha1" value="0.05"/> 
+    <param name="odom_alpha2" value="0.05"/>
+    <param name="odom_alpha3" value="0.05"/>
+    <param name="odom_alpha4" value="0.05"/>
 
-    <!-- If you choose to define initial pose here -->
-    <param name="initial_pose_x" value="0"/>
-    <param name="initial_pose_y" value="0"/>
+    
   </node>
 
   <!--launch rviz-->
