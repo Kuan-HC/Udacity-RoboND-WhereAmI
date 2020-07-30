@@ -15,4 +15,7 @@
     <param name="initial_pose_x" value="0"/>
     <param name="initial_pose_y" value="0"/>
   </node>
+
+  <!--launch rviz-->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d amcl.rviz"/>
 </launch>
