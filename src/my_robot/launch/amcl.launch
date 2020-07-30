@@ -17,5 +17,5 @@
   </node>
 
   <!--launch rviz-->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d amcl.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/workspace/Where/src/amcl.rviz"/>
 </launch>
