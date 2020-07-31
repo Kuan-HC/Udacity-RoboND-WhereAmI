@@ -20,7 +20,7 @@
 2. source devel/setup.bash
 3. roslaunch main main.launch  
 Following nodes will be launched:  
-<img src="nodes.gif"/>
+<img src="nodes.JPG"/>
 
 ## Rviz configuration
 A RVIZ configuration is located /Udacity-RoboND-Where-AM-I/amcl.rviz
