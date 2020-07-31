@@ -14,8 +14,9 @@
     <param name="update_min_a"  value="0.55 "/>     <!--default: 0.5   -->
     <param name="update_min_d"  value="0.2"   />     <!--default: 0.2   -->
     <!-- If you choose to define initial pose here -->
-    <param name="initial_pose_x" value="0"/>
-    <param name="initial_pose_y" value="0"/>
+    <param name="initial_pose_x" value="0.0"/>
+    <param name="initial_pose_y" value="10.0"/>
+    <param name="initial_pose_a" value="-1.5707"/>
 
     <!-- Laser -->
     <param name="laser_max_beams" value="40"  />   <!--default: 30   -->
