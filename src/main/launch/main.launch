@@ -2,12 +2,12 @@
 
 <launch>
   <!-- Robot pose -->
-  <arg name="x" default="0"/>
+  <arg name="x" default="-10"/>
   <arg name="y" default="0"/>
   <arg name="z" default="0"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
-  <arg name="yaw" default="1.57"/>
+  <arg name="yaw" default="0"/>
 
   <!-- Launch other relevant files-->
   <include file="$(find my_robot)/launch/robot_description.launch"/>
@@ -42,8 +42,9 @@
     <param name="update_min_a"  value="0.55 "/>     <!--default: 0.5   -->
     <param name="update_min_d"  value="0.2"   />     <!--default: 0.2   -->
     <!-- If you choose to define initial pose here -->
-    <param name="initial_pose_x" value="0"/>
-    <param name="initial_pose_y" value="0"/>
+    <param name="initial_pose_x" value="-0.101"/>
+    <param name="initial_pose_y" value="9.979"/>
+    <param name="initial_pose_a" value="-1.553"/>
 
     <!-- Laser -->
     <param name="laser_max_beams" value="40"  />   <!--default: 30   -->
