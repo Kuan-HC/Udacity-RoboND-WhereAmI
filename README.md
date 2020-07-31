@@ -2,12 +2,14 @@
 <img src="MCL2.gif"/>
 
 ## Dependencies for Running Locally
-* ``amdl``, ``move_base`` and ``map-server``ROS packages.
+* ``amcl``, ``move_base`` and ``map-server``ROS packages.  
+
   You could install them:(replace <distro> with kinetic, melodic...)  
   ``$ sudo apt-get install ros-<distro>-navigation``  
   ``$ sudo apt-get install ros-<distro>-map-server``  
   ``$ sudo apt-get install ros-<distro>-move-base``  
-  ``$ sudo apt-get install ros-<distro>-amcl``  
+  ``$ sudo apt-get install ros-<distro>-amcl``    
+* ``Recommend ROS version -`` melodic
 
 
 ## Basic Build Instructions
